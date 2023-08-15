@@ -24,7 +24,7 @@ html, body {
 .title_alt{
     align-self: center;
     font-size: 6em;
-    background-color: #F6A3E2;
+    background-color: #131313;
     border-radius: 10px;
 }
 
@@ -35,14 +35,14 @@ html, body {
 }
 .scroll_txt{
     bottom: 55px;
-    font-size: 1.7em;
+    font-size: 1.5em;
     left: 50%; 
     transition: opacity 0.6s; /* Add transition for opacity */
     opacity: 1; /* Initially visible */
 }
 .scroll_arrow{
     bottom: 25px;
-    height: 1.5em;
+    height: 1.2em;
     animation: bounce 1.5s infinite;
     left: 49.3%; 
     transition: opacity 0.5s; /* Add transition for opacity */
@@ -138,12 +138,55 @@ html, body {
     color: #E0E0E0;
 }
 .skills_section{
-    background-image: linear-gradient(#3C1240, #691F6F);
+    background-image: linear-gradient(#4B1650, #962CA0);
+    height: 100vh;
 }  
 
+.cloud-container {
+    display: flex;
+    padding-left: 120px; /* Adjust the padding as needed */
+}
+
+.cloud {
+    position: relative; /* Enable absolute positioning for text */
+    display: flex;
+    flex-direction: column;
+    width: 350px; /* Adjust the width as needed */
+    transform: translate(-50%, -50%); 
+}
+
+.cloud-svg {
+    /* Add your existing SVG styles here */
+    width: 100%; /* Make sure the SVG takes the full width of the container */
+    height: auto; /* Maintain the aspect ratio of the SVG */
+}
+
+.cloud-text {
+    position: absolute; /* Position the text within the cloud */
+    bottom: 20px; /* Adjust the vertical position as needed */
+    left: 0; /* Align the text to the left edge */
+    right: 0; /* Align the text to the right edge */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    color: #000000; /* Adjust the text color as needed */
+    text-align: center;
+}
 
 
 
+
+.expirence_section{
+    background-image: linear-gradient(#962CA0, #CF6FD8);
+    height: 100vh;
+}
+.grass{
+    bottom: 0%;
+}
+
+.footer{
+    background-color: #000000;
+    height: 50vh;
+}  
 /*
 1. Shooting stars?
     a. After about will have a casual linear gradient to the end to create
