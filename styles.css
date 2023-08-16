@@ -55,12 +55,9 @@ html, body {
     60% { transform: translateY(-5px);}
 }
 
-
-
 .star{
     height: 2em;
-    color: white;
-    
+    color: white;    
 }
 .star_parallax-container {
     height: 100vh;
@@ -113,13 +110,61 @@ html, body {
 .about_me{
     background-image: linear-gradient(#2D0D30, #4B1650);
     height:100vh;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
 }
-.about_me_txt{
+.about_me_content{
     color: #E0E0E0;
     margin: 50px;
     font-size: 2em;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
+    align-self: center;
+}
+.about_me_title{
+    align-self: center;
+    text-align: center;
+    font-size: 6em;
+    margin-right: 120px; 
+    color: #E0E0E0;
+}
+.star-parallax-container {
+    position: relative;
+    height: 100vh; /* Adjust the height as needed */
+    margin-right: 60px;
+}
+
+/* Adjust positioning and styles for individual stars */
+#star-about-1 {
+    position: absolute;
+    top: 90%;
+    margin-left: 600px;
+    transform-origin: center center;
+}
+#star-about-2 {
+    position: absolute;
+    top: 40%;
+    margin-left: 60px;
+    transform-origin: center center;
+}
+#star-about-3 {
+    position: absolute;
+    top: 20%;
+    margin-left: 900px;
+    transform-origin: center center;
+}
+#star-about-4 {
+    position: absolute;
+    top: 5%;
+    margin-left: 400px;
+    transform-origin: center center;
+}
+#star-about-5 {
+    position: absolute;
+    top: 75%;
+    margin-left: 990px;
+    transform-origin: center center;
 }
 
 /* MENU */
@@ -145,6 +190,7 @@ html, body {
 .cloud-container {
     display: flex;
     padding-left: 120px; /* Adjust the padding as needed */
+    margin-right: 60px;
 }
 
 .cloud {
@@ -153,12 +199,14 @@ html, body {
     flex-direction: column;
     width: 350px; /* Adjust the width as needed */
     transform: translate(-50%, -50%); 
+    margin-right: 60px;
 }
 
 .cloud-svg {
     /* Add your existing SVG styles here */
     width: 100%; /* Make sure the SVG takes the full width of the container */
     height: auto; /* Maintain the aspect ratio of the SVG */
+    margin-right: 60px;
 }
 
 .cloud-text {
@@ -172,13 +220,14 @@ html, body {
     text-align: center;
 }
 
-
-
-
 .expirence_section{
     background-image: linear-gradient(#962CA0, #CF6FD8);
-    height: 100vh;
+    height:100vh;
+    
 }
+
+
+
 .grass{
     bottom: 0%;
 }
