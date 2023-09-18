@@ -6,28 +6,31 @@ html, body {
 
 /* TITLE */
 .title {
-    display: flex;
     color: #E0E0E0;
     font-family: gloock;
-    justify-content: flex-start;
     height: 100vh; 
     background-image: linear-gradient(#131313, #2D0D30);
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Arrange items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
 }
 .title_txt{
     text-align: center;
-    font-size: 10em;
+    font-size: 8em;
     margin-right: 120px; 
-    margin-left: 120px; 
-    align-self: center;
+    margin-left: 120px;
+    margin-bottom: 30px; 
     
 }
 .title_alt{
-    align-self: center;
-    font-size: 6em;
-    background-color: #131313;
+    text-align: center;
+    font-size: 5em;
     border-radius: 10px;
 }
-
+.title_container{
+    align-items: center; 
+}
 .title_scroll{
     text-align: center;
     position: absolute;
@@ -55,61 +58,10 @@ html, body {
     60% { transform: translateY(-5px);}
 }
 
-.star{
-    height: 2em;
-    color: white;    
-}
-.star_parallax-container {
-    height: 100vh;
-    margin-right: 60 px;
-}
-#star1 {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform-origin: center center;
-}
-#star2 {
-    position: absolute;
-    top: 30%;
-    left: 70%;
-    transform-origin: center center;
-}
-#star3 {
-    position: absolute;
-    top: 80%;
-    left: 25%;
-    transform-origin: center center;
-}
-#star4 {
-    position: absolute;
-    top: 60%;
-    left: 57%;
-    transform-origin: center center;
-}
-#star5 {
-    position: absolute;
-    top: 83%;
-    left: 83%;
-    transform-origin: center center;
-}
-#star6 {
-    position: absolute;
-    top: 15%;
-    left: 10%;
-    transform-origin: center center;
-}
-#star7 {
-    position: absolute;
-    top: 17%;
-    left: 85%;
-    transform-origin: center center;
-}
 
 /********ABOUT ME ****************/
 .about_me{
     background-image: linear-gradient(#2D0D30, #4B1650);
-    height:100vh;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-around;
@@ -129,50 +81,7 @@ html, body {
     margin-right: 120px; 
     color: #E0E0E0;
 }
-.star-parallax-container {
-    position: relative;
-    height: 100vh; /* Adjust the height as needed */
-    margin-right: 60px;
-}
 
-/* Adjust positioning and styles for individual stars */
-#star-about-1 {
-    position: absolute;
-    top: 90%;
-    margin-left: 600px;
-    transform-origin: center center;
-}
-#star-about-2 {
-    position: absolute;
-    top: 40%;
-    margin-left: 60px;
-    transform-origin: center center;
-}
-#star-about-3 {
-    position: absolute;
-    top: 20%;
-    margin-left: 900px;
-    transform-origin: center center;
-}
-#star-about-4 {
-    position: absolute;
-    top: 5%;
-    margin-left: 400px;
-    transform-origin: center center;
-}
-#star-about-5 {
-    position: absolute;
-    top: 75%;
-    margin-left: 990px;
-    transform-origin: center center;
-}
-
-/* MENU */
-.menu{
-    top: 0;
-    position: fixed;
-    left: 0;
-    height: 5rem;}
 
 /* SKILLS */
 .subheader{
@@ -181,75 +90,40 @@ html, body {
     margin-right: 120px; 
     margin-left: 120px;
     color: #E0E0E0;
+    align-self: center;
 }
 .skills_section{
     background-image: linear-gradient(#4B1650, #962CA0);
-    height: 100vh;
-}  
-
-.cloud-container {
+} 
+.skill{
+    color: #E0E0E0;
+    margin: 50px;
+    font-size: 2em;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    align-self: center;
+}
+.skills_container {
     display: flex;
-    padding-left: 120px; /* Adjust the padding as needed */
-    margin-right: 60px;
+    justify-content: center;
 }
 
-.cloud {
-    position: relative; /* Enable absolute positioning for text */
+.skills_column{
     display: flex;
     flex-direction: column;
-    width: 350px; /* Adjust the width as needed */
-    transform: translate(-50%, -50%); 
-    margin-right: 60px;
-}
+    justify-content: space-around;
+    margin-left: 50px;
+    margin-right: 50px;
 
-.cloud-svg {
-    /* Add your existing SVG styles here */
-    width: 100%; /* Make sure the SVG takes the full width of the container */
-    height: auto; /* Maintain the aspect ratio of the SVG */
-    margin-right: 60px;
 }
-
-.cloud-text {
-    position: absolute; /* Position the text within the cloud */
-    bottom: 20px; /* Adjust the vertical position as needed */
-    left: 0; /* Align the text to the left edge */
-    right: 0; /* Align the text to the right edge */
-    font-family: 'Montserrat', sans-serif;
-    font-size: 22px;
-    color: #000000; /* Adjust the text color as needed */
-    text-align: center;
-}
-
-.expirence_section{
+.projects{
     background-image: linear-gradient(#962CA0, #CF6FD8);
-    height:100vh;
-    
+
 }
+.expirence_section{
 
-
-
-.grass{
-    bottom: 0%;
-}
-
-.footer{
-    background-color: #000000;
-    height: 50vh;
 }  
-/*
-1. Shooting stars?
-    a. After about will have a casual linear gradient to the end to create
-2. Create skills section
-    a. want each skill to be in a cloud floating
-3. create project section
-    a. floating cards with some clouds behind getting sparse as go down
-4. Expirence
-    a. ground will get to lightest pt. then put in black grass at bottom basic just list format
-5. under ground put contact info + resume
-6. Add nav menu
-7. adjust for sm. c
 
 
 
-space w/ stars (start page/about) --> clouds(skills/projects) --> ground(expirence) --> underground (contact,resume)*/
 
