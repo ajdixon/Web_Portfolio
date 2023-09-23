@@ -12,7 +12,18 @@
        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     </head>
 <body>
-    <div class="title">
+    <div class="navigation"> 
+          <ul class="nav_links">
+            <li><a href="#title">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">See More</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+    </div>
+
+    <div id="title" class="title">
         <div class = "title_container"> 
         <div class="title_txt">
             <div> ALYSSA </div>
@@ -24,24 +35,18 @@
         <img class= "title_scroll scroll_arrow" src="images/scroll_arrow.svg"> 
 
     </div>
-    <div class="about_me">
+    <div id="about" class="about_me">
         <div class="about_me_title"> ABOUT ME </div>
-        <p class="about_me_content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum deleniti explicabo nesciunt 
-            laudantium debitis cumque quo molestiae eveniet eaque, 
-            sit officiis ducimus provident minus sed pariatur facilis totam harum 
-            repellendus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum deleniti explicabo nesciunt 
-            laudantium debitis cumque quo molestiae eveniet eaque, 
-            sit officiis ducimus provident minus sed pariatur facilis totam harum 
-            repellendus sit officiis ducimus provident minus sed pariatur facilis totam harum 
-            sit officiis ducimus provident minus sed pariatur facilis totam harum .</p>
+        <p class="about_me_content">Hello :) I am a Junior at Villanova University majoring in Computer Science. My passion lies in software development and problem-solving. My time as a Software Engineer Intern at Chubb allowed me to delve deep into data migration from on-premises servers to cloud platforms and refine my Python scripting skills, especially in data validation. Outside of internships, I've taken on projects that demonstrate my prowess in web application development, particularly using tools like HTML, CSS, JavaScript, and React as well as mobile development using React Native. With a keen interest in promoting diversity, equity, and inclusion, I actively engage with Villanova’s Computer Science DEI Committee. I am eager to connect with anyone and start my career in Software Engineering! 
+        </p>
     </div>
-    <div class="skills_section">
+
+    <div id="skills" class="skills_section">
         <div class = subheader class = skills >SKILLS</div>
         <div class="skills_container">
             <div class="skills_column">
                 <div class="skill" id="1"> Languages: <br> Java, Python, C</div>
                 <div class="skill" id="3"> Excel, Word, <br> Power point </div>
-
             </div>
             <div class="skills_column">
                 <div class="skill" id="4"> Web Development: HTML, CSS, <br> JavaScript, React  </div>
@@ -54,31 +59,112 @@
         </div> 
     </div>
 
-    <div class = "projects">
+    <div id="projects" class = "projects">
         <div class = subheader>Projects</div>
-        <div class="projects_container">
-            <div> Beauty Bar </div>
-            <div> Image Gallery</div>
-            <div> This portfolio! </div>
-        </div>
-        <div> In progress...</div>
-        <!-- proj. description + Figma images -->
+            <div class = "proj_container">
+                <div class = "bb_img_container">
+                    <img class = "bb_img" src = "images/beauty_bar.png">
+                    <img class = "bb_img" id="bb_img_2" src = "images/bb_img_2.png">
+                </div>
+                <div class = "bb_txt_container">
+                    <div class = "proj_title"> Beauty Bar </div>
+                    <p class = "proj_paragraph"> In collaboration with a dynamic team, I played
+                        a pivotal role in bringing the Beauty Bar Application Prototype to life.
+                        My contributions spanned the entire Software Development Life Cycle (SDLC).
+                        This included shaping the project's marketecture, crafting process and logical
+                        view diagrams for seamless flow, defining the software architecture, and
+                        actively participating in the development phase. Using React Native, I focused
+                        on building essential components that empowered independent hairdressers to
+                        showcase their services while enabling users to effortlessly search for specific
+                        specialties,
+                        book appointments, and provide valuable feedback through reviews.
+                        </p>
+                </div>
+            </div>
+            <div class = "proj_container">
+                <div class = "gallery_txt_container">
+                    <div class = "proj_title"> Image Gallery</div>
+                    <p class = "proj_paragraph">
+                        As a collaborative effort, I contributed significantly to the
+                        development of an Image Gallery Website. In this project, I utilized React to code the frontend,
+                        establishing a seamless connection to Cloudinary's API. This integration e
+                        mpowered users to effortlessly post, store, and search their images,
+                        enhancing the website's functionality and user experience. Our teamwork
+                        ensured the successful execution of this project, resulting in a user-friendly
+                        platform for image management.
 
+                    </p>
+                </div>
+                <div class = "gallery_img_container">
+                    <img id = "gallery_img_2" class = "gallery_img" src = "images/Image_Gallery.png">
+                    <img class = "gallery_img" src = "images/img_gallery_2.png">
+                </div>
+            </div>
+            <div class = "proj_container">
+                <div class = "port_img_container">
+                    <img class = "gallery_img" src = "images/upcoming_2.png">
+                    <img id = "gallery_img_2" class = "gallery_img" src = "images/upcoming.png">
+                </div>
+                <div class = "port_txt_container">
+                    <div class = "proj_title"> This portfolio!</div>
+                    <p class = "proj_paragraph">
+                        I created this web portfolio to showcase my evolving skills and achievements. I
+                        improved my front-end coding proficiency by using HTML and CSS to design a user-friendly web page.
+                        To enhance the user experience, I added interactive elements with JavaScript to
+                        present my resume information in a web-based format. This made it easily accessible and visually engaging.
+                        This web portfolio project not only improved my coding skills but also provided a
+                        modern and compelling way to display my professional journey and accomplishments.
+
+                    </p>
+                </div>
+            </div>
+            <div class = "proj_container">
+                <div class = "gallery_txt_container">
+                    <div class = "proj_title"> Upcoming...</div>
+                    <p class = "proj_paragraph">
+                        This project aims to create a centralized platform for Villanova
+                        professors and PhD students to post research opportunities, making it
+                        easier for undergraduate students to discover and apply for research
+                        projects across various departments. It will streamline communication
+                        between professors and students, addressing the challenge of finding
+                        research opportunities beyond the first-year match program. The project
+                        will be developed using the MERN stack (MongoDB, Express.js, React,
+                        Node.js) The images to the side are from the Figma wireframe that I built .
+                    </p>
+                </div>
+                <div class = "gallery_img_container">
+                    <img id = "gallery_img_2" class = "gallery_img" src = "images/Research_Hub.png">
+                    <img class = "gallery_img" src = "images/Research_Hub_2.png">
+                </div>
+            </div>
+        </div>
+        
     </div>
 
-    <div class = "expirence_section"> 
-        <div class = subheader>Expirence</div>
-        <!-- <img class="grass" src="images/grass.png" alt="pic">
-        <img class="grass" src="images/grass.png" alt="pic"> -->
+    <div id = "experience" class = "expirence_section"> 
+        <div class = subheader>See More!</div>
+        <div class = "resume_container">
+            <iframe src="Resume.pdf" width="60%" height="500px">
+                If you see this, your browser doesn't support iframes. However, you can <a href="curr_resume.pdf">click here to download the PDF.</a>
+            </iframe>
+        </div>        
+    </div>
 
-
+    <div id = "contact" class = "contact_section">
+        <div class = "footer_title" > Reach Out to Me!</div>
+        <ul class = "footer_links">
+            <li> Email: <a href="adixon8@villanova.edu">adixon8@villanova.edu</a></li>
+            <li> Phone Number: <a href = "215-970-0962"> 215-970-0962</a></li>
+            <li> Linkedin: <a href = "https://www.linkedin.com/in/alyssa-dixon-j/">https://www.linkedin.com/in/alyssa-dixon-j/</a></li>
+            <li> Git Hub: <a href = "https://github.com/ajdixon">https://github.com/ajdixon</a></li>
+        </ul>
     </div>
 
     <div class = "footer">
     </div>
 
 
-    <div class="navigation"> 
+    <!-- <div class="navigation"> 
         <button class="nav_icon" id = "mobile-menu" onclick="show()">
           <div id="bar1" class="bar"></div>
           <div id="bar2" class="bar"></div>
@@ -95,7 +181,7 @@
             <li><a href="/">Contact</a></li>
           </ul>
         </nav>
-    </div>
+    </div> -->
     
     
 

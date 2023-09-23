@@ -1,52 +1,5 @@
 window.addEventListener("scroll", function () {
-    const stars = document.querySelectorAll(".star");
     const scrollY = window.scrollY;
-    console.log("scrollY", scrollY);
-
-    stars.forEach((star, index) => {
-        star.style.transform = `rotate(${scrollY}deg)`;
-    });
-    
-    if (scrollY > 0) {
-        // Hide the elements smoothly
-        document.querySelector('.scroll_txt').style.opacity = '0';
-        document.querySelector('.scroll_arrow').style.opacity = '0';
-    } else {
-        // Show the elements smoothly
-        document.querySelector('.scroll_txt').style.opacity = '1';
-        document.querySelector('.scroll_arrow').style.opacity = '1';
-    } 
-});
-
-
-function show() {
-    var navIcon = document.querySelector('.nav_icon');
-    var navLinksContainer = document.querySelector('.nav_links_container');
-    navIcon.classList.toggle('active'); // Toggle the 'active' class
-    navLinksContainer.classList.toggle('active');
-}
-
-window.addEventListener("scroll", function () {
-    const stars = document.querySelectorAll(".star");
-    const scrollY = window.scrollY;
-    console.log("scrollY", scrollY);
-
-    stars.forEach((star, index) => {
-        star.style.transform = `rotate(${scrollY}deg)`;
-    });
-
-    const sections = document.querySelectorAll(".section"); // Update this to match your section class
-    const navigation = document.querySelector('.navigation');
-    const navigationRect = navigation.getBoundingClientRect();
-
-    sections.forEach((section, index) => {
-        const sectionRect = section.getBoundingClientRect();
-        const left = navigationRect.left - sectionRect.left;
-        const top = navigationRect.top - sectionRect.top;
-        const bgColor = getBackgroundColor(section, left, top);
-        section.style.background = `linear-gradient(${bgColor}, ${bgColor}), ${section.style.background}`;
-    });
-
     if (scrollY > 0) {
         // Hide the elements smoothly
         document.querySelector('.scroll_txt').style.opacity = '0';
@@ -56,4 +9,65 @@ window.addEventListener("scroll", function () {
         document.querySelector('.scroll_txt').style.opacity = '1';
         document.querySelector('.scroll_arrow').style.opacity = '1';
     }
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    let images = document.querySelectorAll('.bb_img, .gallery_img');
+
+    function isElementInViewport(el) {
+        let rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+        );
+    }
+
+    function adjustOpacity() {
+        for (let i = 0; i < images.length; i++) {
+            if (isElementInViewport(images[i])) {
+                images[i].style.opacity = "1";
+            } else {
+                images[i].style.opacity = "0";
+            }
+        }
+    }
+
+    window.addEventListener('scroll', adjustOpacity);
+    window.addEventListener('resize', adjustOpacity);
+    window.addEventListener('load', adjustOpacity);
+});
+
+// Add this code to your JavaScript file (app.js)
+document.addEventListener('DOMContentLoaded', function () {
+    const navLinks = document.querySelectorAll('.nav_links a');
+    
+    navLinks.forEach(function (link) {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href').substring(1); // Get the target section's ID
+            const targetSection = document.getElementById(targetId); // Get the target section
+            
+            if (targetSection) {
+                const duration = 600; // Duration of the scroll animation in milliseconds
+                const targetPosition = targetSection.offsetTop;
+                const startPosition = window.pageYOffset;
+                const distance = targetPosition - startPosition;
+                const startTime = performance.now();
+                
+                function scrollStep(timestamp) {
+                    const currentTime = timestamp - startTime;
+                    const scrollFraction = currentTime / duration;
+                    
+                    if (scrollFraction < 1) {
+                        window.scrollTo(0, startPosition + distance * scrollFraction);
+                        requestAnimationFrame(scrollStep);
+                    } else {
+                        window.scrollTo(0, targetPosition);
+                    }
+                }
+                requestAnimationFrame(scrollStep);
+            }
+        });
+    });
 });
