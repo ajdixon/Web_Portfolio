@@ -6,6 +6,7 @@ html, body {
     #131313,
     #412943  );
     background-attachment: fixed;
+    overflow-x: hidden;
 }
 
 .navigation, .nav_links, .nav_links li {
@@ -97,7 +98,6 @@ html, body {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-around;
-    padding-top: 2rem; 
     margin-right: 2rem;
     margin-left: 2rem;
     align-content: center;
@@ -105,7 +105,8 @@ html, body {
 }
 .about_me_content{
     color: #E0E0E0;
-    margin: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
     font-size: 1.7rem;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
@@ -118,9 +119,7 @@ html, body {
     margin-right: 120px; 
     color: #E0E0E0;
 }
-.section-content {
-    padding-top: 50px; 
-}
+
 
 /******** Skills ****************/
 .subheader{
@@ -318,7 +317,7 @@ html, body {
     border-radius: 10%;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
     .about_me_content{
         font-size: 1.3rem;
     }
@@ -351,7 +350,7 @@ html, body {
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     /* TITLE */
     .title_txt{
         font-size: 7em;
@@ -416,6 +415,7 @@ html, body {
     }
     .bb_txt_container{
         margin-left: 2rem;
+        padding-left: 70px;
     }
     .proj_container {
         display: flex; 
@@ -427,12 +427,14 @@ html, body {
     
     .mobile_img_container{
         justify-content: center;
+        margin-left: 2rem;
     }
     .mobile_img {
         height: 23em;
     }
     .web_img {
         height: 13em;
+        
     }
     .web_img_container{
         align-items: center;
@@ -483,7 +485,7 @@ html, body {
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
     /* Navigation */
     .nav_icon {
         display: block;
